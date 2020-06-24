@@ -10,11 +10,7 @@ import {
 const showCount = 10
 
 function getSecondaryFormatter(datum, formatSecondary) {
-  return (
-    formatSecondary ||
-    datum.secondaryAxis.format ||
-    (val => (Math.floor(val) < val ? Math.round(val * 100) / 100 : val))
-  )
+  return (d) => d;
 }
 
 export default function TooltipRenderer(props) {
